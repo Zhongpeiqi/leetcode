@@ -1,8 +1,6 @@
 package 力扣;
 
 
-import org.w3c.dom.*;
-
 import java.util.*;
 
 /**
@@ -20,10 +18,10 @@ public class 复杂链表的复制 {
             return head;
         }
         HashMap<Node, Node> map = new HashMap<>();
-        for(Node cur = head;cur!=null;cur = cur.next){
+        for(Node cur = head; cur!=null; cur = cur.next){
             map.put(cur,new Node(cur.val));
         }
-        for(Node cur = head;cur!=null;cur = cur.next){
+        for(Node cur = head; cur!=null; cur = cur.next){
             map.get(cur).next = map.get(cur.next);
             map.get(cur).random = map.get(cur.random);
         }
